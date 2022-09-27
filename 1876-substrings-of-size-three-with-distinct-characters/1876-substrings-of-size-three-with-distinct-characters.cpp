@@ -2,7 +2,7 @@ class Solution {
 public:
     int countGoodSubstrings(string s) {
         int count = 0;
-        map<char,int>mp;
+        unordered_map<char,int>mp;
         int i=0,j=0;
         while(j<s.length()){
             mp[s[j]]++;
