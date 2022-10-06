@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<string> summaryRanges(vector<int>& nums) {
         vector<string>res;
-        string temp = "";
+        // string temp = "";
         int n = nums.size();
         for(int i=0;i<n;i++){
             int j = i;
@@ -10,15 +10,17 @@ public:
                 j++;
             }
             if(j>i){
-                temp += to_string(nums[i]);
-                temp += "->";
-                temp += to_string(nums[j]);
+                // temp += to_string(nums[i]);
+                // temp += "->";
+                // temp += to_string(nums[j]);
+                res.push_back(to_string(nums[i])+"->"+ to_string(nums[j]));
             }
             else{
-                temp += to_string(nums[i]);
+                // temp += to_string(nums[i]);
+                res.push_back(to_string(nums[i]));
             }
-            res.push_back(temp);
-            temp = "";
+            // res.push_back(temp);
+            // temp = "";
             i = j;
         }
         return res;
