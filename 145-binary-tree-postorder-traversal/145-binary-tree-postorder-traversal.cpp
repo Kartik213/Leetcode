@@ -46,6 +46,7 @@ public:
     //         }
     //     }
     // }
+    // using 2 stacks
     void postorder(TreeNode* root, vector<int>& res){
         stack<TreeNode*>s1;
         stack<TreeNode*>s2;
