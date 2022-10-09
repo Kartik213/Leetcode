@@ -11,13 +11,56 @@
  */
 class Solution {
 public:
+    // Using stack
+    // vector<vector<int>> levelOrderBottom(TreeNode* root) {
+    //     vector<vector<int>> res;
+    //     queue<TreeNode*>q;
+    //     if(root == NULL)
+    //         return res;
+    //     q.push(root);
+    //     stack<vector<int>>st;
+    //     while(!q.empty()){
+    //         vector<int>vec;
+    //         int n = q.size();
+    //         for(int i=0;i<n;i++){
+    //             TreeNode* temp = q.front();
+    //             q.pop();
+    //             if(temp->left != NULL)
+    //                 q.push(temp->left);
+    //             if(temp->right != NULL)
+    //                 q.push(temp->right);
+    //             vec.push_back(temp->val);
+    //         }
+    //         st.push(vec);
+    //     }
+    //     while(!st.empty()){
+    //         res.push_back(st.top());
+    //         st.pop();
+    //     }
+    //     return res;
+    // }
+    
+    
+    //using height concept
+    int height(TreeNode* root){
+        if(root == NULL){
+            return 0;
+        }
+        int h1 = height(root->left);
+        int h2 = height(root->right);
+        int sum = max(h1,h2)+1;
+        return sum;
+    }
     vector<vector<int>> levelOrderBottom(TreeNode* root) {
-        vector<vector<int>> res;
+        int h = height(root);
+        vector<vector<int>>res(h);
+        h--;
+        if(root == NULL)
+            return res;
         queue<TreeNode*>q;
         if(root == NULL)
             return res;
         q.push(root);
-        stack<vector<int>>st;
         while(!q.empty()){
             vector<int>vec;
             int n = q.size();
@@ -30,11 +73,8 @@ public:
                     q.push(temp->right);
                 vec.push_back(temp->val);
             }
-            st.push(vec);
-        }
-        while(!st.empty()){
-            res.push_back(st.top());
-            st.pop();
+            res[h] = vec;
+            h--;
         }
         return res;
     }
