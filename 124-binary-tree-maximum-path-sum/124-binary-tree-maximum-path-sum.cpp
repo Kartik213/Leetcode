@@ -14,6 +14,7 @@ public:
     int maxPath(TreeNode* root, int& maxi){
         if(root == NULL)
             return 0;
+        //maximum of zero and left subtree to eleminate -ve values as they can not give max sum
         int left = max(0,maxPath(root->left,maxi));
         int right = max(0,maxPath(root->right,maxi));
         
