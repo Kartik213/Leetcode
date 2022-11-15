@@ -7,7 +7,7 @@ public:
             if(nums[i] == 0)
                 return 0;
             if(nums[i]<0)
-                neg = -neg;
+                neg = -1*neg;
         }
         return neg;
     }
