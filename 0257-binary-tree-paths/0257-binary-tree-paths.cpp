@@ -16,12 +16,10 @@ public:
             res.push_back(s);
             return ;
         }
-        if(root->left != NULL){
+        if(root->left != NULL)
             path(root->left,res,s + "->" + to_string(root->left->val));
-        }
-        if(root->right != NULL){
+        if(root->right != NULL)
             path(root->right,res,s + "->" + to_string(root->right->val));
-        }
     }
     
     vector<string> binaryTreePaths(TreeNode* root) {
