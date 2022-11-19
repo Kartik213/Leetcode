@@ -18,10 +18,8 @@ public:
     }
     
     int maxDepth(TreeNode* root) {
-        int maxi = 0;
         if(!root)
-            return maxi;
-        maxi = height(root);
-        return maxi;
+            return 0;
+        return height(root);
     }
 };
