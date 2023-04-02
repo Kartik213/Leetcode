@@ -19,7 +19,6 @@ public:
                 }
             }
             pairs[i] = m - left;
-        }
         //     long long product = (long long)spells[i] * (long long)potions[m-1];
         //     if(product < success){
         //         pairs[i] = 0;
@@ -38,7 +37,7 @@ public:
         //         }
         //         pairs[i] = m - left;
         //     }
-        // }
+        }
         return pairs;
     }
 };
