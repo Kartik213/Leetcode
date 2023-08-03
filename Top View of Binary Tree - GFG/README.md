@@ -9,7 +9,8 @@
 4&nbsp;&nbsp;&nbsp; 5&nbsp; 6&nbsp;&nbsp; 7</span></p>
 
 <p><span style="font-size:18px">Top view will be: 4 2 1 3 7<br>
-<strong>Note: </strong>Return nodes from <strong>leftmost </strong>node to <strong>rightmost </strong>node.</span></p>
+<strong>Note: </strong>Return nodes from <strong>leftmost </strong>node to <strong>rightmost </strong>node. Also if 2 nodes are outside the shadow of the tree and are at same position then consider the extreme ones only(i.e. leftmost and rightmost).&nbsp;<br>
+For ex -&nbsp;<strong>1 2 3 N 4 5 N 6 N 7 N 8 N 9 N N N N N</strong> will give&nbsp;<strong>8 2 1 3</strong> as answer. Here 8 and 9 are on the same position but 9 will get shadowed.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
