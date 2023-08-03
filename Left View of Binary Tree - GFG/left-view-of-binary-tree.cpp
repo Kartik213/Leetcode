@@ -128,18 +128,31 @@ struct Node
  */
 
 //Function to return a list containing elements of left view of the binary tree.
-void lefttrav(Node* root, int level, vector<int>& res){
-    if(root == NULL)
-        return ;
-    if(level == res.size()){
-        res.push_back(root->data);
-    }
-    lefttrav(root->left,level+1,res);
-    lefttrav(root->right,level+1,res);
-}
-
 vector<int> leftView(Node *root){
-    vector<int>res;
-    lefttrav(root,0,res);
-    return res;
+    vector<int>ans;
+    if(!root){
+        return ans;
+    }
+    map<int, int> nodes;
+    queue<pair<Node*, int>> q;
+    q.push({root, 0});
+    while(!q.empty()){
+        auto temp = q.front();
+        q.pop();
+        Node* tempNode = temp.first;
+        int lvl = temp.second;
+        if(nodes.find(lvl) == nodes.end()){
+            nodes[lvl] = tempNode->data;
+        }
+        if(tempNode->left){
+            q.push({tempNode->left, lvl+1});
+        }
+        if(tempNode->right){
+            q.push({tempNode->right, lvl+1});
+        }
+    }
+    for(auto i:nodes){
+        ans.push_back(i.second);
+    }
+    return ans;
 }
