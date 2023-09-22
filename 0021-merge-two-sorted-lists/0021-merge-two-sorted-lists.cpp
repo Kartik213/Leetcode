@@ -19,33 +19,33 @@ public:
         }
         ListNode* res;
         if(list1->val <= list2->val){
-            res = new ListNode(list1->val);
+            res = list1;
             list1 = list1->next;
         }
         else{
-            res = new ListNode(list2->val);
+            res = list2;
             list2 = list2->next;
         }
         ListNode* temp = res;
         while(list1 != NULL && list2 != NULL){
             if(list1->val <= list2->val){
-                res->next = new ListNode(list1->val);
+                res->next = list1;
                 res = res->next;
                 list1 = list1->next;
             }
             else{
-                res->next = new ListNode(list2->val);
+                res->next = list2;
                 res = res->next;
                 list2 = list2->next;
             }
         }
         while(list1 != NULL){
-            res->next = new ListNode(list1->val);
+            res->next = list1;
             list1 = list1->next;
             res = res->next;
         }
         while(list2 != NULL){
-            res->next = new ListNode(list2->val);
+            res->next = list2;
             list2 = list2->next;
             res = res->next;
         }
