@@ -22,13 +22,18 @@ public:
             ptr2 = ptr2->next;
         }
         if(ptr2 == NULL){
-            return head->next;
+            ListNode* temp = head;
+            head = head->next;
+            delete temp;
+            return head;
         }
         while(ptr2 != NULL && ptr2->next != NULL){
             ptr2 = ptr2->next;
             ptr1 = ptr1->next;
         }
-        ptr1->next = ptr1->next->next;
+        ListNode* temp = ptr1->next;
+        ptr1->next = temp->next;
+        delete temp;
         return head;
     }
 };
