@@ -27,4 +27,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/Kartik213/Leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
+## String
+|  |
+| ------- |
+| [3617-find-the-original-typed-string-i](https://github.com/Kartik213/Leetcode/tree/master/3617-find-the-original-typed-string-i) |
 <!---LeetCode Topics End-->
