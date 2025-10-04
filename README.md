@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0011-container-with-most-water](https://github.com/Kartik213/Leetcode/tree/master/0011-container-with-most-water) |
 | [1510-find-lucky-integer-in-an-array](https://github.com/Kartik213/Leetcode/tree/master/1510-find-lucky-integer-in-an-array) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/Kartik213/Leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [3152-maximum-value-of-an-ordered-triplet-ii](https://github.com/Kartik213/Leetcode/tree/master/3152-maximum-value-of-an-ordered-triplet-ii) |
@@ -51,4 +52,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1510-find-lucky-integer-in-an-array](https://github.com/Kartik213/Leetcode/tree/master/1510-find-lucky-integer-in-an-array) |
+## Two Pointers
+|  |
+| ------- |
+| [0011-container-with-most-water](https://github.com/Kartik213/Leetcode/tree/master/0011-container-with-most-water) |
+## Greedy
+|  |
+| ------- |
+| [0011-container-with-most-water](https://github.com/Kartik213/Leetcode/tree/master/0011-container-with-most-water) |
 <!---LeetCode Topics End-->
